@@ -15,10 +15,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: Setup BATS
-      uses: mig4/setup-bats@master
-      with:
-        bats-version: 1.1.0
+    - name: Setup BATS testing framework
+      uses: mig4/setup-bats@v1.0.1
     - name: Check out the code
       uses: actions/checkout@v2
     - name: Run the compiling tests
@@ -31,10 +29,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: Setup BATS
-      uses: mig4/setup-bats@master
-      with:
-        bats-version: 1.1.0
+    - name: Setup BATS testing framework
+      uses: mig4/setup-bats@v1.0.1
     - name: Check out the code
       uses: actions/checkout@v2
     - name: Run the cleaning tests

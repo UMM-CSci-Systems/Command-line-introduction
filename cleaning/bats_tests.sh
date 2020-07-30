@@ -130,7 +130,7 @@ teardown() {
 @test "The new archive has the right number of files in it" {
   ./big_clean.sh "$little.tgz" "$BATS_TMPDIR"
   # run bash -c "tar -ztf cleaned_$little.tgz | grep -E '^little_dir/file_\d+$' | wc -l"
-  run bash -c "tar -ztf cleaned_$little.tgz | grep -E '^little_dir/file_\d+$'"
+  run bash -c "tar -ztf cleaned_$little.tgz | grep 'little_dir/file_' | wc -l"
   assert_output --regexp "\s*$num_little_remaining_files\s*"
 }
 

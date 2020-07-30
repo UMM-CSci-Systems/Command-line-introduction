@@ -1,6 +1,7 @@
 # Command line introduction and shell scripting <!-- omit in toc -->
 
-[![CI](https://github.com/UMM-CSci-Systems/Command-line-introduction/workflows/CI/badge.svg)](https://github.com/UMM-CSci-Systems/Command-line-introduction/actions)
+![Compile tests](https://github.com/UMM-CSci-Systems/Command-line-introduction/workflows/Compile%20tests/badge.svg)
+![Clean tests](https://github.com/UMM-CSci-Systems/Command-line-introduction/workflows/Clean%20tests/badge.svg)
 (This will be marked as "Failing" until you have all the tests passing.)
 
 ## Overview

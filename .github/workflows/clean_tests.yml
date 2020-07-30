@@ -45,5 +45,7 @@ jobs:
         echo "*** wc ***"
         wc --version
         tar -ztf cleaned_little_dir.tgz | grep '/f' | wc -l
-        tar -ztf cleaned_little_dir.tgz | egrep '^little_dir/file_[0-9]+$' | wc -l
+        tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_[0-9]+$' | wc -l
+        tar -ztf cleaned_little_dir.tgz | egrep '^little_dir/file_[:digit:]+$' | wc -l
+        tar -ztf cleaned_little_dir.tgz | grep -P '^little_dir/file_\d+$' | wc -l
       working-directory: ./cleaning

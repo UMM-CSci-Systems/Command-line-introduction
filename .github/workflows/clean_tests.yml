@@ -32,8 +32,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: A sample run of the script
       run: |
-        ./cleaning/big_clean.sh little_dir.tgz
+        ./big_clean.sh little_dir.tgz
         ls
         tar -ztf cleaned_little_dir.tgz
-        tar -ztf cleaned_$little.tgz | grep -E '^little_dir/file_\d+$'
-        tar -ztf cleaned_$little.tgz | grep -E '^little_dir/file_\d+$' | wc -l
+        tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$'
+        tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$' | wc -l
+      working-directory: ./cleaning

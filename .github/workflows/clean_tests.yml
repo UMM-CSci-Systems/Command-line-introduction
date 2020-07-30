@@ -34,10 +34,15 @@ jobs:
       run: |
         mkdir sample_run_temp
         ./big_clean.sh little_dir.tgz sample_run_temp
+        echo "*** ls ***""
         ls
         ls -R sample_run_temp
-        tree sample_run_temp
+        echo "*** tar -ztf ***"
         tar -ztf cleaned_little_dir.tgz
+        echo "*** grep ***"
+        grep --version
         tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$'
+        echo "*** wc ***"
+        wc --version
         tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$' | wc -l
       working-directory: ./cleaning

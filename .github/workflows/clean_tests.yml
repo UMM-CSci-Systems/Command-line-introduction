@@ -36,16 +36,10 @@ jobs:
         ./big_clean.sh little_dir.tgz sample_run_temp
         echo "*** ls ***"
         ls
+        echo "*** ls -R sample_run_temp ***"
         ls -R sample_run_temp
         echo "*** tar -ztf ***"
         tar -ztf cleaned_little_dir.tgz
-        echo "*** grep ***"
-        grep --version
-        tar -ztf cleaned_little_dir.tgz | grep '/f'
-        echo "*** wc ***"
-        wc --version
-        tar -ztf cleaned_little_dir.tgz | grep '/f' | wc -l
-        tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_[0-9]+$' | wc -l
-        tar -ztf cleaned_little_dir.tgz | egrep '^little_dir/file_[:digit:]+$' | wc -l
+        echo "*** Count remaining files ***"
         tar -ztf cleaned_little_dir.tgz | grep -P '^little_dir/file_\d+$' | wc -l
       working-directory: ./cleaning

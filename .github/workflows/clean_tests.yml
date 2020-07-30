@@ -42,7 +42,6 @@ jobs:
         echo "*** grep ***"
         grep --version
         tar -ztf cleaned_little_dir.tgz | grep '/f'
-        tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$'
         echo "*** wc ***"
         wc --version
         tar -ztf cleaned_little_dir.tgz | grep '/f' | wc -l

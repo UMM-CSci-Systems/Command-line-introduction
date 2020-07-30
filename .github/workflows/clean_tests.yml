@@ -32,8 +32,11 @@ jobs:
     - uses: actions/checkout@v1
     - name: A sample run of the script
       run: |
-        ./big_clean.sh little_dir.tgz
+        mkdir sample_run_temp
+        ./big_clean.sh little_dir.tgz sample_run_temp
         ls
+        ls -R sample_run_temp
+        tree sample_run_temp
         tar -ztf cleaned_little_dir.tgz
         tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$'
         tar -ztf cleaned_little_dir.tgz | grep -E '^little_dir/file_\d+$' | wc -l

@@ -1,7 +1,7 @@
 # Command line introduction and shell scripting <!-- omit in toc -->
 
 [![Compile tests](../../workflows/Compile%20tests/badge.svg)](../../actions?query=workflow%3A"Compile+tests")
-[![Clean tests](../../workflows/Clean%20tests/badge.svg)(../../actions?query=workflow%3A"Clean+tests")
+[![Clean tests](../../workflows/Clean%20tests/badge.svg)](../../actions?query=workflow%3A"Clean+tests")
 (This will be marked as "Failing" until you have all the tests passing.)
 
 ## Overview

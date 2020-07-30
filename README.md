@@ -2,7 +2,8 @@
 
 [![Compile tests](../../workflows/Compile%20tests/badge.svg)](../../actions?query=workflow%3A"Compile+tests")
 [![Clean tests](../../workflows/Clean%20tests/badge.svg)](../../actions?query=workflow%3A"Clean+tests")
-(This will be marked as "Failing" until you have all the tests passing.)
+[![Shellcheck](../../workflows/shellcheck/badge.svg)](../../actions?query=workflow%3A"shellcheck")
+(These will be marked as "Failing" until you have all the tests passing.)
 
 ## Overview
 

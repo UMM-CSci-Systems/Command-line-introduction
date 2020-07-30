@@ -34,7 +34,7 @@ jobs:
       run: |
         mkdir sample_run_temp
         ./big_clean.sh little_dir.tgz sample_run_temp
-        echo "*** ls ***""
+        echo "*** ls ***"
         ls
         ls -R sample_run_temp
         echo "*** tar -ztf ***"

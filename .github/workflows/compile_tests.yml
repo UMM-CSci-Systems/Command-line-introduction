@@ -24,3 +24,19 @@ jobs:
     - name: Run the compiling tests
       run: bats bats_tests.sh
       working-directory: ./compiling
+
+
+  # Run the script and show the results
+  sample-run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: A sample run of the script
+      run: |
+        mkdir sample_run_temp
+        ./extract_and_compile.sh sample_run_temp
+        echo "*** ls ***"
+        ls
+        echo "*** ls -R sample_run_temp ***"
+        ls -R sample_run_temp
+      working-directory: ./compiling
